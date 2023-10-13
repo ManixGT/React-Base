@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import Navbar from './views/Navbar/index';
+import Navbar from './views/Navbar/Navbar';
 
 function App() {
   return (

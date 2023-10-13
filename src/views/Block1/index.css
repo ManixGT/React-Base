@@ -1,0 +1,51 @@
+.Background {
+  background: linear-gradient(180deg, #dfe6fb 0%, #fff 85.57%);
+}
+.MainDiv {
+  padding: 50px 100px;
+}
+.SubHeading {
+  color: rgb(46, 79, 116);
+}
+.ButtonPair {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 65%;
+}
+.Button1 {
+  border-radius: 6.36px;
+  background: #242f63;
+  padding: 14.292px 35.775px;
+  border: 2px solid #242f63;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background: #fff;
+    border: 3px solid #242f62;
+  }
+}
+
+.Button1:hover .TypographyText1 {
+    color: #242f63;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.Button2 {
+  border-radius: 6.36px;
+  background: #242f63;
+  padding: 14.292px 35.775px;
+  border: 2px solid #242f63;
+  transition: background-color 0.3s, color 0.3s;
+  &:hover {
+    background: #fff;
+    border: 3px solid #242f62;
+    
+  }
+}
+.Button2:hover .TypographyText2 {
+  color: #242f63;
+  font-size: 22px;
+  font-weight: 600;
+}

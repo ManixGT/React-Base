@@ -55,51 +55,48 @@ export default function Navbar() {
   };
 
   return (
-    <Box>
+    <Box className="Linear">
       <Grid container className="Navbar">
-        <Grid item className="Main" md={2} lg={2}>
+        <Grid item className="Main">
           <img src={Logo} alt="Logo" />
         </Grid>
-        <Grid item md={6} lg={6}>
+        <Grid item>
           <ul className="ListItems">
             {listItems.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
           </ul>
         </Grid>
-        <Grid item md={2} lg={2}>
-          <Box className="Search">
-            <TextField
-              placeholder="Search name..."
-              variant="outlined"
-              size="small"
-              name="firstName"
-              inputProps={{ maxLength: 256 }}
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              style={{ paddingLeft: "0px !important" }}
-              InputProps={{
-                className: classes.input,
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <IconButton onClick={handleSearchClick}>
-                      <img
-                        style={{ paddingRight: "15px" }}
-                        src={SearchIcon}
-                        width={30}
-                        height={30}
-                        alt="Search"
-                      />
-                    </IconButton>
-                  </InputAdornment>
-                ),
-                style: { border: "none", paddingLeft: "0px !important" },
-              }}
-            />
-          </Box>
+        <Grid item className="Search">
+          <TextField
+            placeholder="Search name..."
+            variant="outlined"
+            size="small"
+            name="firstName"
+            inputProps={{ maxLength: 256 }}
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            style={{ paddingLeft: "0px !important" }}
+            InputProps={{
+              className: classes.input,
+              startAdornment: (
+                <InputAdornment position="start">
+                  <IconButton onClick={handleSearchClick}>
+                    <img
+                      style={{ paddingRight: "15px" }}
+                      src={SearchIcon}
+                      width={30}
+                      height={30}
+                      alt="Search"
+                    />
+                  </IconButton>
+                </InputAdornment>
+              ),
+              style: { border: "none", paddingLeft: "0px !important" },
+            }}
+          />
         </Grid>
-
-        <Grid item md={2} lg={2}>
+        <Grid item>
           <Box className="Contact">
             <Typography className="Contact-typo">Contact Us</Typography>
           </Box>

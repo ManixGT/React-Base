@@ -1,8 +1,11 @@
+.Linear {
+  box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.8);
+}
 .Navbar {
+  width: 100%;
   background: #f2f2f2;
   display: flex;
   justify-content: space-between;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
   padding: 20px;
   align-items: center;
 }
@@ -20,13 +23,12 @@
   line-height: 26px;
 }
 .LastBoth {
-    display: flex;
+  display: flex;
+  align-items: center;
 }
 .Search {
-  width: 100%;
-  max-width: 75%;
   border: 50%;
-  padding: 6px 10px;
+  padding: 0px 10px;
   border-radius: 100px;
   background-color: rgb(224, 224, 215) !important;
 }
@@ -40,6 +42,15 @@
   background-color: #242f62;
   padding: 10px 20px;
   border-radius: 6.36px;
+
+  & :hover {
+    background-color: #fff;
+    border: 2px solid #242f62;
+  }
+}
+
+.Contact:hover .Contact-typo {
+  color: #242f63;
 }
 .Contact-typo {
   color: #fff;

@@ -1,0 +1,18 @@
+.Main2 {
+  background-color: #1e9ad3;
+}
+.Inner {
+  display: flex;
+  padding: 22px 50px;
+  justify-content: space-around;
+  align-items: center;
+  transform: rotate(0.9deg);
+  background-color: #fff;
+}
+.Image1,
+.Image2,
+.Image3,
+.Image4,
+.Image5 {
+  transform: rotate(-3deg); /* Keep the rotation here */
+}

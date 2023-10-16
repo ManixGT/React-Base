@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "./index.css";
-import Block1 from "../../images/Block-1.png";
 import Logo from "../../images/Block-1(title).svg";
 import { Box, Grid, Typography } from "@mui/material";
 import { makeStyles } from "@material-ui/core/styles";
+import Block1 from "../../images/Block1(right).png";
+
 const useStyles = makeStyles((theme) => ({}));
 
 export default function PageOne() {
@@ -11,7 +12,7 @@ export default function PageOne() {
   return (
     <Box className="Background">
       <Grid container className="MainDiv">
-        <Grid item lg={6} className="InnerDiv">
+        <Grid item className="InnerDiv" md={6} lg={6} >
           <div>
             <img src={Logo} alt="" />
           </div>
@@ -55,7 +56,7 @@ export default function PageOne() {
                 For Services
               </Typography>
             </div>
-            <div className="Button2">
+            <div className="Button2 custom-button">
               <Typography
                 className="TypographyText2"
                 color={"#fff"}
@@ -71,9 +72,9 @@ export default function PageOne() {
             </div>
           </div>
         </Grid>
-        {/* <Grid item>
-          <img src={Block1} alt="" />
-        </Grid> */}
+        <Grid item md={6} lg={6} className="Img">
+          <img src={Block1} alt=""  />
+        </Grid>
       </Grid>
     </Box>
   );

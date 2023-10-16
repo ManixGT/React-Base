@@ -5,11 +5,8 @@ import {
   Box,
   Grid,
   Typography,
-  TextField,
-  InputAdornment,
-  IconButton,
 } from "@mui/material";
-import SearchIcon from "../../images/magnifying-glass.png";
+
 import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
   input: {
@@ -66,35 +63,6 @@ export default function Navbar() {
               <li key={index}>{item}</li>
             ))}
           </ul>
-        </Grid>
-        <Grid item className="Search">
-          <TextField
-            placeholder="Search name..."
-            variant="outlined"
-            size="small"
-            name="firstName"
-            inputProps={{ maxLength: 256 }}
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            style={{ paddingLeft: "0px !important" }}
-            InputProps={{
-              className: classes.input,
-              startAdornment: (
-                <InputAdornment position="start">
-                  <IconButton onClick={handleSearchClick}>
-                    <img
-                      style={{ paddingRight: "15px" }}
-                      src={SearchIcon}
-                      width={30}
-                      height={30}
-                      alt="Search"
-                    />
-                  </IconButton>
-                </InputAdornment>
-              ),
-              style: { border: "none", paddingLeft: "0px !important" },
-            }}
-          />
         </Grid>
         <Grid item>
           <Box className="Contact">

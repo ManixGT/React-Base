@@ -14,5 +14,5 @@
 .Image3,
 .Image4,
 .Image5 {
-  transform: rotate(-3deg); /* Keep the rotation here */
+  transform: rotate(-1deg); /* Keep the rotation here */
 }

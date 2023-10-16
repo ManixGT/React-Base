@@ -22,6 +22,27 @@
   font-weight: 500;
   line-height: 26px;
 }
+
+.ListItems li {
+  position: relative; /* Add position relative to the list items */
+}
+
+.ListItems li::before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  display: block;
+  background-color: #000;
+  position: absolute; /* Position absolutely within the list item */
+  bottom: 0; /* Position at the bottom of the list item */
+  transform: scaleX(0); /* Initially, scale to 0 width */
+  transition: transform 0.5s; /* Add a transition to create the hover effect */
+}
+
+.ListItems li:hover::before {
+  transform: scaleX(1); /* Scale to full width on hover */
+}
+
 .LastBoth {
   display: flex;
   align-items: center;

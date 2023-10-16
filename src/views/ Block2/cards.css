@@ -1,76 +1,67 @@
 .card-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    padding: 50px 200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 50px 200px;
+}
+
+.card {
+  position: relative;
+  box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.12);
+  padding: 18px;
+  border-radius: 4px;
+  text-align: left;
+}
+
+.card:hover {
+  animation: glowing-border 2s infinite;
+  background-color: #ffffff;
+  background-image: linear-gradient(230deg, #ffffff 50%, #5899e2 74%);
+}
+
+@keyframes glowing-border {
+  0% {
+    border: 4px solid #007bff;
   }
-  
-  .card {
-    position: relative;
-    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.12);
-    padding: 18px;
-    border-radius: 4px;
-    text-align: left;
+  50% {
+    border: 4px solid #c3f2ff;
   }
-  
-  .card:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: -2px;
-    left: -2px;
-    background: linear-gradient(to right, #1e9ad3 0%, #1e9ad3 100%),
-                linear-gradient(to top, #1e9ad3 50%, transparent 50%),
-                linear-gradient(to top, #1e9ad3 50%, transparent 50%),
-                linear-gradient(to right, #1e9ad3 0%, #1e9ad3 100%),
-                linear-gradient(to left, #1e9ad3 0%, #1e9ad3 100%);
-    background-size: 100% 4px, 4px 8px, 4px 8px, 0 4px, 0 4px;
-    background-position: 50% 100%, 0 0, 100% 0, 100% 0, 0 0;
-    background-repeat: no-repeat, no-repeat;
-    transition: transform 0.3s ease-in-out, background-position 0.3s ease-in-out, background-size 0.3s ease-in-out;
-    transform: scaleX(0) rotate(180deg);
-    transition-delay: 0.6s, 0.3s, 0s;
+  100% {
+    border: 4px solid #2685cd;
   }
-  
-  .card:hover:before {
-    background-size: 200% 4px, 4px 16px, 4px 16px, 55% 4px, 55% 4px;
-    background-position: 50% 100%, 0 100%, 100% 100%, 100% 0, 0 0;
-    transform: scaleX(1) rotate(180deg);
-    transition-delay: 0s, 0.3s, 0.6s;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card:hover img {
+  transform: translate(0px, -10px);
+  transition: transform 0.4s ease-in-out;
+}
+
+.card h3 {
+  color: #243342;
+  font-size: 30px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  margin: 8px 0;
+  line-height: 125%;
+}
+
+.card .context {
+  color: rgba(36, 51, 66, 0.6);
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
   }
-  
-  .card img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .card:hover img {
-    transform: translate(5px, -10px);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .card h3 {
-    color: #243342;
-    font-size: 30px;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 600;
-    margin: 8px 0;
-    line-height: 125%;
-  }
-  
-  .card .context {
-    color: rgba(36, 51, 66, 0.60);
-    font-family: Inter;
-    font-size: 20px;
-    font-weight: 500;
-    font-style: normal;
-    margin-top: 8px;
-  }
-  
-  @media (max-width: 768px) {
-    .card-container {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  }
+}

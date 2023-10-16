@@ -2,7 +2,11 @@
   background: linear-gradient(180deg, #dfe6fb 0%, #fff 85.57%);
 }
 .MainDiv {
-  padding: 50px 100px;
+  padding: 120px 100px;
+}
+.InnerDiv{
+  display:grid;
+  gap: 32px;
 }
 .SubHeading {
   color: rgb(46, 79, 116);

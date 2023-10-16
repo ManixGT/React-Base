@@ -11,7 +11,7 @@ export default function PageOne() {
   return (
     <Box className="Background">
       <Grid container className="MainDiv">
-        <Grid item lg={6}>
+        <Grid item lg={6} className="InnerDiv">
           <div>
             <img src={Logo} alt="" />
           </div>
@@ -71,9 +71,9 @@ export default function PageOne() {
             </div>
           </div>
         </Grid>
-        <Grid item>
+        {/* <Grid item>
           <img src={Block1} alt="" />
-        </Grid>
+        </Grid> */}
       </Grid>
     </Box>
   );

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./index.css";
-import Logo from "../../images/Logo.svg";
+import Logo from "../../images/Logo.png";
 import {
   Box,
   Grid,
